@@ -19,7 +19,7 @@ A simple task management API built with the Vaden framework in Dart.
 1. **Clone the repository**:
 
    ```bash
-   git clone <your-repository-url>
+   git clone https://github.com/dev-mariana/task_tracker
    cd task_tracker
    ```
 
@@ -46,14 +46,13 @@ Server listening on port 8080
 
 The API is available at `http://localhost:8080/api/tasks`
 
-| Method   | Endpoint          | Description              | Request Body                                                                              |
-| -------- | ----------------- | ------------------------ | ----------------------------------------------------------------------------------------- |
-| `POST`   | `/api/tasks/`     | Create a new task        | `{"title": "Task Title", "description": "Task Description", "status": "open"}`            |
-| `GET`    | `/api/tasks/`     | List all tasks           | None                                                                                      |
-| `GET`    | `/api/tasks/{id}` | Get a specific task      | None                                                                                      |
-| `PUT`    | `/api/tasks/{id}` | Update a task completely | `{"title": "Updated Title", "description": "Updated Description", "status": "completed"}` |
-| `PATCH`  | `/api/tasks/{id}` | Partially update a task  | `{"status": "in-progress"}`                                                               |
-| `DELETE` | `/api/tasks/{id}` | Delete a task            | None                                                                                      |
+| Method   | Endpoint          | Description             | Request Body                                                                   |
+| -------- | ----------------- | ----------------------- | ------------------------------------------------------------------------------ |
+| `POST`   | `/api/tasks/`     | Create a new task       | `{"title": "Task Title", "description": "Task Description", "status": "open"}` |
+| `GET`    | `/api/tasks/`     | List all tasks          | None                                                                           |
+| `GET`    | `/api/tasks/{id}` | Get a specific task     | None                                                                           |
+| `PATCH`  | `/api/tasks/{id}` | Partially update a task | `{"status": "in-progress"}`                                                    |
+| `DELETE` | `/api/tasks/{id}` | Delete a task           | None                                                                           |
 
 ## Testing the API
 
@@ -162,32 +161,12 @@ The Vaden framework auto-generates some code. After making changes to annotation
 2. **Route not found**: Ensure all routes start with a forward slash `/`
 3. **JSON parsing errors**: Verify request body format and Content-Type header
 
-### Debug Mode
-
-For debugging, you can add print statements in your service or repository methods. The server will output these to the console.
-
 ## Dependencies
 
 - **vaden**: Main framework for routing and dependency injection
 - **uuid**: For generating unique task identifiers
 - **collection**: For utility methods like `firstWhereOrNull`
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
 ## License
 
-[Add your license information here]
-
-## Support
-
-For issues or questions:
-
-1. Check the troubleshooting section
-2. Review the Vaden framework documentation
-3. Create an issue in the repository
+MIT
